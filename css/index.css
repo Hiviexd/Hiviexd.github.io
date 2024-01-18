@@ -89,6 +89,12 @@ body {
     animation: typing 2s steps(29) normal both, blink-caret 0.5s normal infinite;
 }
 
+@media (max-width: 600px) {
+    .subtitle {
+        font-size: 1.5em;
+    }
+}
+
 /* The typing effect */
 @keyframes typing {
     from {
@@ -123,4 +129,14 @@ body {
 
 .logo-link:hover {
     opacity: 0.7;
+}
+
+::-moz-selection {
+    color: #161616;
+    background: #e6e6e6;
+}
+
+::selection {
+    color: #161616;
+    background: #e6e6e6;
 }
