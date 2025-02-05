@@ -25,6 +25,10 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap"
             rel="stylesheet" />
+
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
     </head>
     <body>
         <div class="content">
@@ -35,21 +39,30 @@
             </div>
 
             <div class="links">
-                <a href="https://osu.ppy.sh/users/14102976" target="_blank">
+                <a href="https://osu.ppy.sh/users/14102976" target="_blank" data-tippy-content="Check my osu! profile">
                     <img class="logo-link" src="assets/osu.svg" alt="osu!" />
                 </a>
-                <a href="https://github.com/Hiviexd" target="_blank">
+                <a href="https://github.com/Hiviexd" target="_blank" data-tippy-content="View my projects on GitHub">
                     <img class="logo-link" src="assets/github.svg" alt="GitHub" />
                 </a>
-                <a href="https://twitter.com/_Hivie" target="_blank">
+                <a href="https://twitter.com/_Hivie" target="_blank" data-tippy-content="Follow me on Twitter">
                     <img class="logo-link" src="assets/twitter.svg" alt="Twitter" />
+                </a>
+                <a href="mailto:me@hivie.tn" target="_blank" data-tippy-content="Email me via me@hivie.tn">
+                    <img class="logo-link" src="assets/email.svg" alt="Email" />
+                </a>
+                <a href="#" class="discord-link" data-tippy-content="Click to copy my Discord username">
+                    <img class="logo-link" src="assets/discord.svg" alt="Discord" />
                 </a>
             </div>
 
             <span class="subtitle">osu!team, software engineering</span>
         </div>
+        <div id="copy-notification" class="copy-notification">Copied!</div>
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script src="/js/particles.js"></script>
         <script src="/js/typewriter.js"></script>
+        <script src="/js/tooltips.js"></script>
+        <script src="/js/clipboard.js"></script>
     </body>
 </html>

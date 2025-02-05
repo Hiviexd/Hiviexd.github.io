@@ -45,7 +45,7 @@ body {
     transform: translateY(-50%);
     border-right: 2px solid #e6e6e6;
     white-space: nowrap;
-    margin: 1em auto 0 auto;
+    margin: 1.5em auto 0 auto;
 }
 
 @media (max-width: 600px) {
@@ -99,4 +99,34 @@ body {
 ::selection {
     color: #161616;
     background: #e6e6e6;
+}
+
+.tippy-box {
+    background-color: #e6e6e6;
+    color: #161616;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #e6e6e6;
+}
+
+.copy-notification {
+    position: fixed;
+    background: #e6e6e6;
+    color: #161616;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7em;
+    font-weight: 300;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.copy-notification.show {
+    opacity: 1;
+    transform: translate(-50%, 30px);
 }
