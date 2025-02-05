@@ -1,0 +1,56 @@
+/* Interactive components and animations */
+.subtitle {
+    font-weight: 100;
+    font-size: 2em;
+    transform: translateY(-50%);
+    border-right: 2px solid #e6e6e6;
+    white-space: nowrap;
+    margin: 1.5em auto 0 auto;
+}
+
+@media (max-width: 600px) {
+    .subtitle {
+        font-size: 1.5em;
+    }
+}
+
+/* Tooltips and notifications */
+.tippy-box {
+    background-color: #e6e6e6;
+    color: #161616;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #e6e6e6;
+}
+
+.copy-notification {
+    position: fixed;
+    background: #e6e6e6;
+    color: #161616;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7em;
+    font-weight: 300;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.copy-notification.show {
+    opacity: 1;
+    transform: translate(-50%, 30px);
+}
+
+/* Animations */
+@keyframes blink-caret {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
