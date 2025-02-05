@@ -11,7 +11,7 @@ function setupTypewriter() {
         if (i < text.length) {
             subtitle.textContent += text[i];
             i++;
-            setTimeout(type, 80);
+            setTimeout(type, 60);
         }
     }
 
