@@ -57,6 +57,53 @@
     transform: translate(-50%, 35px);
 }
 
+.spotify-status {
+    margin-top: 1em;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+.spotify-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.spotify-content a {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.spotify-content a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--text-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.spotify-content a:hover::after {
+    width: 100%;
+}
+
+.spotify-icon {
+    width: 1em;
+    height: 1em;
+    filter: invert(var(--icon-invert));
+    transition: filter 0.3s ease-in-out;
+}
+
+
 /* Animations */
 @keyframes blink-caret {
     from {
