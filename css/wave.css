@@ -1,0 +1,39 @@
+.wave-animation {
+    display: none;
+    gap: 0.2em;
+    align-items: center;
+    height: 1em;
+    margin: 0 0.3em;
+}
+
+.wave-animation.playing {
+    display: flex;
+}
+
+.wave-bar {
+    width: 0.15em;
+    height: 40%;
+    background-color: var(--text-color);
+    border-radius: 3em;
+    transition: background-color 0.3s ease-in-out;
+    animation: wave 1.2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.wave-bar-2 {
+    animation-delay: 0.2s;
+}
+
+.wave-bar-3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        transform: scaleY(0.3);
+    }
+    50% {
+        transform: scaleY(1.5);
+    }
+}

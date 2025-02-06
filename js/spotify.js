@@ -37,15 +37,18 @@ function setupSpotify() {
 
     function updateSpotifyPresence(data) {
         const spotifyText = document.querySelector(".spotify-text");
-        if (!spotifyText) return;
+        const waveAnimation = document.querySelector(".wave-animation");
+        if (!spotifyText || !waveAnimation) return;
 
         if (!data?.spotify) {
             spotifyText.textContent = "Not playing";
+            waveAnimation.classList.remove("playing");
             return;
         }
 
         const { song, artist, track_id } = data.spotify;
         spotifyText.innerHTML = `<a href="https://open.spotify.com/track/${track_id}" target="_blank" style="color: inherit; text-decoration: none;">${song} - ${artist}</a>`;
+        waveAnimation.classList.add("playing");
     }
 
     socket.onclose = () => {
