@@ -47,7 +47,7 @@ function setupSpotify() {
         }
 
         const { song, artist, track_id } = data.spotify;
-        spotifyText.innerHTML = `<a href="https://open.spotify.com/track/${track_id}" target="_blank" style="color: inherit; text-decoration: none;">${song} - ${artist}</a>`;
+        spotifyText.innerHTML = `<a href="https://open.spotify.com/track/${track_id}" target="_blank" style="color: inherit; text-decoration: none;">${song} — ${artist}</a>`;
         waveAnimation.classList.add("playing");
     }
 
