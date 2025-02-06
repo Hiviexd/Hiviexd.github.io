@@ -15,7 +15,14 @@
 .logo-main {
     width: 16em;
     height: auto;
+    cursor: pointer;
     animation: fadeIn 0.5s ease-in-out;
+    filter: invert(var(--icon-invert));
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.logo-main:hover {
+    transform: scale(1.05);
 }
 
 .links {
@@ -28,9 +35,12 @@
 .logo-link {
     text-decoration: none;
     width: 1.8em;
-    transition: opacity 0.3s ease-in-out;
+    transform: scale(1);
+    transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+    filter: invert(var(--icon-invert));
 }
 
 .logo-link:hover {
-    opacity: 0.7;
+    opacity: var(--link-hover-opacity);
+    transform: scale(1.2);
 }

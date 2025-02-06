@@ -1,5 +1,5 @@
 tippy("[data-tippy-content]", {
-    theme: "light",
+    theme: localStorage.getItem("theme") || "light",
     placement: "bottom",
     animation: "fade",
     arrow: false,

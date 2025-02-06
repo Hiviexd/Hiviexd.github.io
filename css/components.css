@@ -3,9 +3,10 @@
     font-weight: 100;
     font-size: 2em;
     transform: translateY(-50%);
-    border-right: 2px solid #e6e6e6;
+    border-right: 2px solid var(--text-color);
     white-space: nowrap;
     margin: 1.5em auto 0 auto;
+    transition: color 0.3s ease-in-out, border-right-color 0.3s ease-in-out;
 }
 
 @media (max-width: 37em) {
@@ -16,20 +17,31 @@
 
 /* Tooltips and notifications */
 .tippy-box {
-    background-color: #e6e6e6;
-    color: #161616;
+    background-color: var(--text-color);
+    color: var(--bg-color);
     font-size: 0.9em;
     font-weight: 300;
 }
 
 .tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
-    border-bottom-color: #e6e6e6;
+    border-bottom-color: var(--text-color);
+}
+
+.tippy-box[data-theme="dark"],
+.tippy-box[data-theme="light"] {
+    background-color: var(--text-color) !important;
+    color: var(--bg-color) !important;
+}
+
+.tippy-box[data-theme="dark"][data-placement^="bottom"] > .tippy-arrow::before,
+.tippy-box[data-theme="light"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: var(--text-color) !important;
 }
 
 .copy-notification {
     position: fixed;
-    background: #e6e6e6;
-    color: #161616;
+    background: var(--text-color);
+    color: var(--bg-color);
     padding: 0.25em 0.5em;
     border-radius: 0.25em;
     font-size: 0.8em;
@@ -48,7 +60,7 @@
 /* Animations */
 @keyframes blink-caret {
     from {
-        border-right-color: rgba(255, 255, 255, 0.75);
+        border-right-color: var(--text-color);
     }
     to {
         border-right-color: transparent;
