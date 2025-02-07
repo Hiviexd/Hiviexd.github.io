@@ -6,7 +6,8 @@
     border-right: 2px solid var(--text-color);
     white-space: nowrap;
     margin: 1.5em auto 0 auto;
-    transition: color 0.3s ease-in-out, border-right-color 0.3s ease-in-out;
+    color: var(--text-color);
+    transition: border-right-color 0.3s ease-in-out, color 0.2s ease-in-out;
 }
 
 @media (max-width: 37em) {
@@ -102,7 +103,6 @@
     filter: invert(var(--icon-invert));
     transition: filter 0.3s ease-in-out;
 }
-
 
 /* Animations */
 @keyframes blink-caret {
