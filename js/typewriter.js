@@ -1,6 +1,6 @@
 function setupTypewriter() {
     const subtitle = document.querySelector(".subtitle");
-    const text = "osu!team, software engineering";
+    const text = "osu!team, software dev";
 
     subtitle.textContent = "";
     subtitle.style.opacity = "0";
