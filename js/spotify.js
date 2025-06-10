@@ -6,6 +6,7 @@ function setupSpotify() {
     const socket = new WebSocket("wss://api.lanyard.rest/socket");
 
     socket.onopen = () => {
+        console.log("Spotify socket opened");
         socket.send(
             JSON.stringify({
                 op: 2,
@@ -52,6 +53,7 @@ function setupSpotify() {
     }
 
     socket.onclose = () => {
+        console.log("Spotify socket closed");
         if (heartbeatInterval) clearInterval(heartbeatInterval);
         setTimeout(() => {
             window.location.reload();
@@ -59,6 +61,7 @@ function setupSpotify() {
     };
 
     socket.onerror = (error) => {
+        console.error("Spotify socket error:", error);
         if (heartbeatInterval) clearInterval(heartbeatInterval);
     };
 }
