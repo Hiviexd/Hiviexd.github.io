@@ -2,17 +2,21 @@
 .subtitle {
     font-weight: 100;
     font-size: 2em;
-    transform: translateY(-50%);
     border-right: 2px solid var(--text-color);
     white-space: nowrap;
-    margin: 1.5em auto 0 auto;
+    margin: 1em auto 0 auto;
     color: var(--text-color);
     transition: border-right-color 0.3s ease-in-out, color 0.2s ease-in-out;
+    min-height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 37em) {
     .subtitle {
         font-size: 1.5em;
+        min-height: 1.8em; /* Adjust min-height for smaller screens */
     }
 }
 
@@ -59,10 +63,10 @@
 }
 
 .spotify-status {
-    margin-top: 1em;
+    margin-top: 0.75em;
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
-    animation-delay: 1.5s;
+    animation-delay: 3.5s;
 }
 
 .spotify-content {

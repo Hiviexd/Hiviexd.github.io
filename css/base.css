@@ -48,3 +48,37 @@ body {
         opacity: 1;
     }
 }
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(75%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(75%);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes elasticSlideUp {
+    0% {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-10%);
+        opacity: 0.5;
+    }
+    80% {
+        transform: translateY(5%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
