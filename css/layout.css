@@ -14,15 +14,19 @@
     max-width: 80%;
 }
 
+.logo {
+    opacity: 0;
+    animation: elasticSlideUp 0.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
 .logo-main {
     width: 16em;
     height: auto;
     cursor: pointer;
-    opacity: 0;
-    animation: elasticSlideUp 0.5s ease-out forwards;
-    animation-delay: 1s;
     filter: invert(var(--icon-invert));
-    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: filter 0.3s ease-in-out, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: center;
 }
 
 .logo-main:hover {
@@ -42,7 +46,7 @@
     text-decoration: none;
     width: 1.8em;
     transform: scale(1);
-    transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     filter: invert(var(--icon-invert));
 }
 
